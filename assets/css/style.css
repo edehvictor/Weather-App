@@ -1,0 +1,155 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-shadow: 0px 4px 8px black;
+}
+
+section.weather-container {
+    background-image: url(../images/weather-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    padding: 10px;
+}
+
+section.weather-container .weather-content-wrap {
+    max-width: 780px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    flex: 1;
+    border-radius: 10px;
+    display: none;
+}
+
+.weather-image {
+    font-size: 200px;
+    text-align: center;
+    padding: 23px 0 0 0;
+    line-height: 270px;
+}
+
+.description-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.description-wrap-1 {
+    margin-right: 10px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.description-wrap-1 .city {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+
+.description-wrap-1 .description {
+    font-size: 50px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.description-wrap-2 {
+    font-size: 155px;
+}
+
+.description-wrap-2 .temperature {
+    display: flex;
+}
+
+
+.description-wrap-2 .temperature .temp-unit {
+    cursor: pointer;
+    color: skyblue;
+    transition: all 0.3s ease-in-out;
+}
+
+.description-wrap-2 .temperature .temp-unit:hover {
+    transform: scale(1.2);
+}
+
+
+@media screen and (max-width:753px) {
+
+    .description-wrap,
+    .description-wrap-1,
+    .description-wrap-1 .city {
+        display: block;
+    }
+
+    .description-wrap-1 {
+        margin-top: 20px;
+    }
+
+    .description-wrap-1 .city,
+    .description-wrap-2 .temperature {
+        text-align: center;
+    }
+
+    .description-wrap-1 .description {
+        line-height: 1.1;
+    }
+
+    .description-wrap-2 {
+        font-size: 96px;
+    }
+
+    .description-wrap-2 .temperature {
+        justify-content: center;
+    }
+
+    .weather-content-wrap .weather-image {
+        font-size: 130px;
+        height: 160px;
+        line-height: 160px;
+    }
+}
+
+
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    border-bottom: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
